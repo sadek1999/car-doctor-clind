@@ -8,6 +8,7 @@ const Aboutus = () => {
             <div className="hero-content flex-col lg:flex-row">
                 <div className='lg:w-1/2'>
                 <img src={parson}className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={parts} className='' alt="" />
                 </div>
                 
                 <div className='lg:w-1/2'>
