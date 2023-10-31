@@ -29,7 +29,8 @@ const Authprobider = ({ Children }) => {
   useEffect(()=>{
     const unsubscribe=onAuthStateChanged(auth,(currentuser)=>{
         console.log(currentuser);
-        setuser(currentuser)
+        setuser(currentuser);
+        setloding(false)
     })
   },[])
 
