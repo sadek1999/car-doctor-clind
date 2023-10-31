@@ -32,6 +32,7 @@ const Authprobider = ({ Children }) => {
         setuser(currentuser);
         setloding(false)
     })
+    return unsubscribe;
   },[])
 
     const info = {
