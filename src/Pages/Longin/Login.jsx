@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/Authprobider";
 
   
 const Login = () => {
+    const {login}=useContext(AuthContext)
 
     const handlLogin=e=>{
         e.preventDefault()
