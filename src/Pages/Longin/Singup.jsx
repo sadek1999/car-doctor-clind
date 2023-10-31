@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 
-  
-const Login = () => {
+
+const Singup = () => {
 
     const handlLogin=e=>{
         e.preventDefault()
-        
 
     }
     return (
@@ -45,4 +44,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Singup;
