@@ -7,7 +7,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStat
 export const AuthContext = createContext()
 const auth = getAuth(app)
 
-const Authprobider = ({ Children }) => {
+const Authprobider = ({children}) => {
 
     const provider =new GoogleAuthProvider();
     const [user, setuser] = useState(null);
@@ -49,7 +49,7 @@ const Authprobider = ({ Children }) => {
     }
     return (
         <AuthContext.Provider value={info}>
-            {Children}
+           {children}
 
         </AuthContext.Provider>
     );
