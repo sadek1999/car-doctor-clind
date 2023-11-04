@@ -1,12 +1,31 @@
 
 import { Link } from "react-router-dom";
 import logo from "../../../public/assets/logo.svg"
+import { useContext } from "react";
+import { AuthContext } from "../../provider/Authprobider";
+
 const Navbar = () => {
+    const {logout,user}=useContext(AuthContext)
+
+    const handllogout=()=>{
+        logout()
+        .then(res=>{
+            console.log(res)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+    }
 
     const links=<>
     <li><Link to={'/'}>Home</Link></li>
     <li><Link to={'/about'}>about</Link></li>
     <li><Link to={'/login'}>Login</Link></li>
+    {
+        user?.email?<li> <Link to={`/bookings/${user.email}`}>Bookigns</Link> </li>:<li></li>
+    }
+    
     </>
     return (
         <nav>
@@ -28,7 +47,10 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user?<button onClick={handllogout} className="btn" > log out</button>:<button className="btn" > Login</button>
+                    }
+             
                 </div>
             </div>
         </nav>

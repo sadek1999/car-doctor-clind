@@ -8,7 +8,7 @@ const Services = () => {
 
     const [servic,setservic]=useState([]);
     useEffect(()=>{
-        fetch(`https://raw.githubusercontent.com/ProgrammingHero1/car-doctor-resources/main/services.json`)
+        fetch(`http://localhost:5002/service`)
         .then(res=>res.json())
         .then(data=>{
             // console.log(data)
